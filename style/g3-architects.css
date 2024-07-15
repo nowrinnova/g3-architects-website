@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
+* {
+  border: 1px solid red;
+  }
 .work-sans-font {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
@@ -7,6 +9,12 @@
   font-style: normal;
 }
 /* shared elements */
+
+main{
+  max-width: 1440px;
+  margin: 0 auto;
+  /* padding: 20px 260px 20px 260px; */
+}
 .display-flex {
   display: flex;
 }
@@ -42,7 +50,7 @@
 header {
   background: rgba(255, 144, 14, 0.1);
  
-  /* padding: 20px 260px 20px 260px; */
+  padding: 20px 260px 20px 260px;
 }
 .navbar {
   max-width: 1920px;
@@ -80,9 +88,33 @@ header {
 }
 .banner-pic{
   width: 100%;
+  margin-bottom: 50px;
 }
 /* header sections ends */
 /* main section starts */
+/* feature list section starts */
+.list-of-feature{
+ align-items: center;
+ padding: 20px 260px 20px 260px; ;
+}
+/* .feauture-container{
+  gap: 70px;
+} */
+.feature-pic-container{
+ 
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.feature-pic{
+  width: 342px;
+}
+.feauture-discription{
+  margin-left: 4.5rem;
+  max-width: 530px;
+}
+/* feature list section ends */
 /* main section ends */
 
 
@@ -93,7 +125,31 @@ header {
 /* break point */
 /* small device */
 @media screen and (max-width:576px) {
-  .nav-links ,.navbar{
+  header,main {
+    padding: 10px;
+  }
+  .nav-links ,.navbar ,.list-of-feature{
     flex-direction: column;
   }  
+  .feature-pic-container{
+    grid-template-columns: repeat(1 ,1fr);
+  }
+  .feauture-discription{
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width:577px) and (max-width:992px) {
+  header,main {
+    padding: 10px;
+  }
+  .nav-links ,.navbar ,.list-of-feature{
+    flex-direction: column;
+  }  
+  .feature-pic-container{
+    grid-template-columns: repeat(1 ,1fr);
+  }
+  .feauture-discription{
+    margin-left: 10px;
+  }
+  
 }
